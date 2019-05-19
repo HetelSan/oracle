@@ -1,10 +1,10 @@
-CREATE OR REPLACE FUNCTION "Fibonacci"
+CREATE OR REPLACE FUNCTION fibonacci
 (n number) RETURN number IS
 BEGIN
     IF  n < 2 THEN
         RETURN n;
     ELSE
-        RETURN "Fibonacci"(n - 2) + "Fibonacci"(n - 1);
+        RETURN fibonacci(n - 2) + fibonacci(n - 1);
     END IF;
-END "Fibonacci";
+END fibonacci;
 /
